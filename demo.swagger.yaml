@@ -1,0 +1,85 @@
+swagger: '2.0'
+# info:
+#   title: Sample
+#   version: v1
+#   description: APIs
+schemes:
+  - http
+host: localhost
+basePath: /sample
+tags:
+  - name: Users
+# securityDefinitions:
+#   JWT:
+#     type: "apiKey"
+#     name: "Authorization"
+#     in: header
+# security:
+#   - JWT: []
+paths:
+  /api/users:
+    get:
+      tags:
+        - Users
+      summary: List all users
+      description: The API for listing all users
+      responses:
+        default:
+          description: ''
+  /api/users/{id}:
+    get:
+      tags:
+        - Users
+      summary: Get an user by its id
+      description: The API for getting an user by its id
+      parameters:
+        - name: id
+          type: integer
+          required: true
+          in: path
+          description: The user id
+      responses:
+        default:
+          description: ''
+    patch:
+      tags:
+        - Users
+      summary: Update an user by its id
+      description: The API for updating an user by its id
+      parameters:
+        - name: id
+          type: integer
+          required: true
+          in: path
+          description: The user id
+        - in: body
+          name: data
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        default:
+          description: ''
+    delete:
+      tags:
+        - Users
+      summary: Delete an user by its id
+      description: The API for updating an user by its id
+      parameters:
+        - name: id
+          type: integer
+          required: true
+          in: path
+          description: The user id
+      responses:
+        default:
+          description: ''
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      age:
+        type: integer

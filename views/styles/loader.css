@@ -1,0 +1,71 @@
+:root {
+	--ldr-size: 120px;
+	--ldr-border: 16px;
+	--ldr-ani-rot-duration: 1s;
+}
+
+#loader {
+	position: absolute;
+	width: var(--ldr-size);
+	height: var(--ldr-size);
+	top: 50%;
+	left: calc(50% + var(--ldr-border));
+	z-index: 1;
+	margin: -75px 0 0 -75px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+
+	border-radius: 50%;
+	border-top: var(--ldr-border) solid blue;
+	border-right: var(--ldr-border) solid green;
+	border-bottom: var(--ldr-border) solid red;
+	border-left: var(--ldr-border) solid pink;
+}
+
+.animate-bottom {
+	position: relative;
+	-webkit-animation-name: animatebottom;
+	-webkit-animation-duration: var(--ldr-ani-rot-duration);
+	animation-name: animatebottom;
+	animation-duration: var(--ldr-ani-rot-duration);
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes animatebottom {
+	from {
+		bottom: -100px;
+		opacity: 0
+	}
+	to {
+		bottom: 0px;
+		opacity: 1;
+	}
+}
+
+@keyframes animatebottom {
+	from {
+		bottom: -100px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}

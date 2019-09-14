@@ -1,0 +1,107 @@
+/**
+ * for the default settings
+ */
+
+:root {
+	--full-size: 100%;
+	--header-height: auto;
+	--footer-height: 50px;
+	--navbar-height: 50px;
+	--row-padding-top: 20px;
+	--row-padding-bottom: 20px;
+	--icon-zoom-factor: 1.2;
+	--color: #ddd;
+	--font-size: 16px;
+	--font-family: "Georgia";
+}
+
+/**
+ * for pages
+ */
+
+html, body {
+	width: var(--full-size);
+	height: var(--full-size);
+}
+
+#header {
+	display: none;
+}
+
+#navibar {
+	display: none;
+	height: var(--navbar-height);
+}
+
+#content {
+	display: none;
+	margin-top: calc(var(--header-height) + var(--navbar-height));
+}
+
+#footer {
+	display: none;
+	bottom: 0px;
+	position: fixed;
+	width: var(--full-size);
+	height: var(--footer-height);
+	line-height: var(--footer-height);
+}
+
+.bg {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	color: var(--color);
+	background-repeat: repeat-x repeat-y;
+	background-image: url("../images/tile.jpg");
+}
+
+/**
+ * for icons
+ */
+
+.fa-light {
+	color: #fff;
+}
+
+.fa-fw {
+	font-size: 48px;
+	color: var(--color);
+	text-align: left;
+}
+
+.fa-fw:hover {
+	-moz-transform: scale(var(--icon-zoom-factor));
+	-webkit-transform: scale(var(--icon-zoom-factor));
+	-o-transform: scale(var(--icon-zoom-factor));
+	-ms-transform: scale(var(--icon-zoom-factor));
+	transform: scale(var(--icon-zoom-factor));
+}
+
+/**
+ * for others
+ */
+
+.auto-fit {
+	width: auto;
+	height: auto;
+}
+
+.display-none {
+	display: none;
+}
+
+.row.padding-top {
+	padding-bottom: var(--row-padding-top);
+}
+
+.row.padding-bottom {
+	padding-bottom: var(--row-padding-bottom);
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+ul.navbar-nav > li:hover {
+	background-color: #222;
+}
