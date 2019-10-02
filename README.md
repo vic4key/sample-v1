@@ -31,7 +31,7 @@ PHP 5.6 or greater
 4. Okay. Take a look the home page at [localhost/sample](http://localhost/sample), the demo page at [localhost/sample/demo](http://localhost/sample/demo), the user/pass for testing is `vic/123` or `test/123` or `user/123`
 
 Note:
-> To change the base `/sample` to another such as root-level `/` or sub-level `/example` we have to edit `defines.php:$SUB_PATH` and `demo.swagger.yaml:basePath`
+> To change the base `/sample` to another such as root-level `/` or sub-level `/example` we have to edit `commons/defines.php:$SUB_PATH` and `demo.swagger.yaml:basePath`
 
 > The demo files are started with the prefix `demo.*` and these are deletable eg. `demo.content.php, demo.swagger.js, etc`
 
