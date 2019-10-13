@@ -32,30 +32,30 @@
 	</div>
 
 	<div id="navibar">
-		<?php require_once("imports/navbar.php"); ?>
+		<?php include_once("imports/navbar.php"); ?>
 	</div>
 
 	<div id="content" class="container">
-		<?php require_once("$file_page_content"); ?>
+		<?php include_once("$file_page_content"); ?>
 	</div>
 
 	<div id="footer" class="container">
-		<div class="row"><?php require_once("imports/footer.php"); ?></div>
+		<div class="row"><?php include_once("imports/footer.php"); ?></div>
 	</div>
 
-	<?php require_once("imports/about.php"); ?>
+	<?php include_once("imports/about.php"); ?>
 
 	<script type="text/javascript" src="libraries/jQuery-3.1.1/jquery-3.1.1.min.js"></script>
 
 	<script type="text/javascript" src="libraries/Bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
-	<?php require_once("imports/jsdefines.php"); ?>
+	<?php include_once("imports/jsdefines.php"); ?>
 
 	<script type="text/javascript" src="views/scripts/misc.js"></script>
 	<script type="text/javascript" src="views/scripts/events.js"></script>
 	<script type="text/javascript" src="views/scripts/loader.js"></script>
 
-	<?php require_once("imports/lazincl.php"); ?>
+	<?php include_once("imports/lazincl.php"); ?>
 
 </body>
 

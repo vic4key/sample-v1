@@ -6,19 +6,19 @@ require_once "controllers/demo.user.php";
  * User APIs
  */
 
-$IUsers = new \Controller\IUsers;
+$users = new \Controller\Users;
 
-Flight::route("GET /api/users(/?@id:[me\d]+)", array($IUsers, "Get"));
-Flight::route("PATCH /api/users/@id:[\d]+", array($IUsers, "Update"));
-Flight::route("DELETE /api/users/@id:[\d]+", array($IUsers, "Delete"));
+Flight::route("GET /api/users(/?@id:[me\d]+)", array($users, "Get"));
+Flight::route("PATCH /api/users/@id:[\d]+", array($users, "Update"));
+Flight::route("DELETE /api/users/@id:[\d]+", array($users, "Delete"));
 
 /**
  * Sign Up/In/Out
  */
 
-Flight::route("POST /users", array($IUsers, "Create"));
+Flight::route("POST /users", array($users, "Create"));
 
-Flight::route("POST /users/signin", array($IUsers, "Signin"));
-Flight::route("DELETE /users/signout", array($IUsers, "Signout"));
+Flight::route("POST /users/signin", array($users, "Signin"));
+Flight::route("DELETE /users/signout", array($users, "Signout"));
 
 ?>

@@ -27,7 +27,7 @@ $GLOBALS = array_merge($GLOBALS, array
 		"host"		=> $HOST_NAME,
 		"name"		=> "sample",
 		"user"		=> "root",
-		"pass"		=> "",
+		"pass"		=> "mysql",
 	),
 	"views"		=> array(
 		"scripts"	=> array(),

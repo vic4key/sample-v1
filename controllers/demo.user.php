@@ -4,7 +4,7 @@ namespace Controller;
 
 require_once "models/demo.user.php";
 
-class IUsers
+class Users
 {
 	public function Get($id)
 	{
